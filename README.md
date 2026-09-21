@@ -135,7 +135,3 @@ Se identificaron 12 entidades: `COMUNA`, `ESPECIALIDAD`, `BANCO`, `DIAGNOSTICO` 
 - **BANCO (0,1) — PAGO (0,N):** un banco puede estar asociado a cero o muchos pagos; un pago puede tener registrado cero o un banco (campo opcional, tal como se observa en la boleta de ejemplo del enunciado, donde el campo Banco puede quedar en blanco).
 
 A diferencia de otros modelos con entidades débiles, en este caso todas las tablas principales cuentan con su propia clave primaria natural (rut, código de catálogo o identificador numérico), por lo que la mayoría de las relaciones son no identificadoras. La única excepción es la entidad asociativa `DOSIS`, cuya clave primaria compuesta se forma íntegramente por las claves foráneas heredadas de `RECETA` y `MEDICAMENTO`, para resolver la relación N:M entre ambas.
-
-## Contenido del repositorio
-
-- [`Semana6_Basededatos_Scrip.sql`](./Semana6_Basededatos_Scrip.sql): script DDL completo, con instrucciones de borrado de objetos, creación de tablas (Caso 1) y ajustes mediante `ALTER TABLE` (Caso 2), en orden de ejecución secuencial.
